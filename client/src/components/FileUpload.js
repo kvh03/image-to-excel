@@ -79,7 +79,7 @@ const FileUpload = React.memo(() => {
         formData.append('title', title);
 
         try {
-            const response = await axios.post('https://image-to-excel.onrender.com/upload', formData, {
+            const response = await axios.post('https://image-to-excel-server.vercel.app/upload', formData, {
                 headers: { 'Content-Type': 'multipart/form-data' },
             });
 
