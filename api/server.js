@@ -24,7 +24,7 @@ const __dirname = path.dirname(__filename);
 const app = express();
 
 // Middleware
-app.use(cors({origin: 'http://localhost:3000'}));
+app.use(cors({origin: 'https://image-to-excel-ng81-woad.vercel.app'}));
 app.use(express.static('public')); // For serving static files
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/public', express.static(path.join(__dirname, 'public')));
