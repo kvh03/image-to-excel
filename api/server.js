@@ -24,7 +24,8 @@ const __dirname = path.dirname(__filename);
 const app = express();
 
 // Middleware
-app.use(cors({origin: 'http://localhost:3000'}));
+// app.use(cors({origin: 'http://localhost:3000'}));
+app.use(cors({}));
 app.use(express.static('public')); // For serving static files
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/public', express.static(path.join(__dirname, 'public')));
@@ -220,6 +221,7 @@ app.post('/upload', upload.single('file'), async (req, res) => {
         res.json({
             excelFileUrl: `/public/${excelFilename}`,
             pdfFileUrl: `/public/${pdfFilename}`,
+            previewData: jsonResponse
         });
     } catch (error) {
         console.error('Error processing file:', error);
