@@ -22,6 +22,7 @@ const __dirname = path.dirname(__filename);
 
 // Initialize Express
 const app = express();
+// const allowedOrigins = ['https://image-to-excel-pdf.vercel.app'];
 
 // Middleware
 // app.use(cors({origin: 'http://localhost:3000'}));
