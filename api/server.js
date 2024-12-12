@@ -22,18 +22,19 @@ const __dirname = path.dirname(__filename);
 
 // Initialize Express
 const app = express();
-const allowedOrigins = ['https://image-to-excel-pdf.vercel.app'];
+// const allowedOrigins = ['https://image-to-excel-pdf.vercel.app'];
 
 // Middleware
-app.use(cors({
-    origin: function (origin, callback) {
-        if (allowedOrigins.includes(origin)) {
-            callback(null, true);
-        } else {
-            callback(new Error('Not allowed by CORS'));
-        }
-    },
-}));
+// app.use(cors({
+//     origin: function (origin, callback) {
+//         if (allowedOrigins.includes(origin)) {
+//             callback(null, true);
+//         } else {
+//             callback(new Error('Not allowed by CORS'));
+//         }
+//     },
+// }));
+app.use(cors({}));
 app.use(express.static('public')); // For serving static files
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/public', express.static(path.join(__dirname, 'public')));
