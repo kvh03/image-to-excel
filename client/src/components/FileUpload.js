@@ -182,14 +182,14 @@ return (
                     <div className='success'>
                         <p>File uploaded successfully!</p>
                         <a
-                            href={`http://localhost:5000${downloadUrl}`}
+                            href={`https://image-to-excel.onrender.com${downloadUrl}`}
                             download={file}
                         >
                             Download Excel
                         </a>
 
                         <a
-                            href={`http://localhost:5000${pdfFileUrl}`}
+                            href={`https://image-to-excel.onrender.com${pdfFileUrl}`}
                             download={file}
                             style={{ marginLeft: '10px' }}
                             target="_blank"
@@ -221,14 +221,14 @@ return (
             <div className='success'>
                 <p>File uploaded successfully!</p>
                 <a
-                    href={`http://localhost:5000${downloadUrl}`}
+                    href={`https://image-to-excel.onrender.com${downloadUrl}`}
                     download={file}
                 >
                     Download Excel
                 </a>
 
                 <a
-                    href={`http://localhost:5000${pdfFileUrl}`}
+                    href={`https://image-to-excel.onrender.com${pdfFileUrl}`}
                     download={file}
                     style={{ marginLeft: '10px' }}
                     target="_blank"
