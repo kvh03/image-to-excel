@@ -207,7 +207,7 @@ app.post('/upload', upload.single('file'), async (req, res) => {
             displayName: req.file.originalname,
         });
 
-        const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
+        const model = genAI.getGenerativeModel({ model: 'gemini-2.0-flash' });
         const prompt = `Extract and display what is written in this document(Only the written part in the form of rows and columns and not printed text/watermarks) as JSON with rows and columns with no backticks. Do not wrap the json codes in JSON markers such as backticks. If there is a date, follow the separation of month, year, day with "/" or "-" as written in the document. Generate only rows and columns and no page numbers i.e., the whole json should be one single array of objects. The numbers should return as numbers, not as text i.e., numbers should not be enclosed in double quotes. Display quantities as quantities for example, 10mL.`;
 
         const result = await model.generateContent([{
